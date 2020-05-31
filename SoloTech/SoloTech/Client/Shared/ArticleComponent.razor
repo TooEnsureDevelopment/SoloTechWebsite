@@ -1,0 +1,41 @@
+﻿@using ArticleInterface = SoloTech.Client.ComponentData.ArticleComponent.Article;
+
+@using System.Text.RegularExpressions;
+
+
+
+
+<div>
+    <div class=" mb-3">
+        <h5>@subTitle</h5>
+    </div>
+    <div>
+        <p>@StyleProccessor(@content, @key)</p>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string subTitle { get; set; }
+    [Parameter] public string name { get; set; }
+    [Parameter] public string content { get; set; }
+
+    // Search string for a key, default interation set to 1
+    [Parameter] public string key { get; set; }
+    [Parameter] public int iKey { get; set; } = 1;
+
+    public MarkupString StyleProccessor(string a, string key)
+    {
+        // 
+        // 1. Look for key make sure there is space on both sides
+        string pattern = "\\s+" + key + "\\s+";
+        // 2. Implementing desired style
+        string replacement = " <span class=\"code-highlighterr\">" + key + "</span> ";
+
+        Regex rgx = new Regex(pattern);
+        // 3. Insert desired style if pattern found
+        string result = rgx.Replace(a, replacement, iKey);
+
+        return ((MarkupString)result);
+    }
+}
+

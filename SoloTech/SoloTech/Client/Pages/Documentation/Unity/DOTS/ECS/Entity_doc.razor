@@ -1,0 +1,46 @@
+﻿@using ArticleInterface = SoloTech.Client.ComponentData.ArticleComponent.Article;
+
+@page "/Documentation-Unity-DOTS-ECS-Entities"
+
+<div class="row">
+    <div class="col-xl-9">
+        <div class="border-bottom mb-3"
+             style="padding: 1rem 0">
+            <h1>@articlePage</h1>
+        </div>
+        <div>
+            <ArticleComponent subTitle=@subTitle
+                              content=@content
+                              key=@key />
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+@code {
+    private string articlePage = "Entities";
+
+    private string key = "Burst Compiler";
+    private int ikey = 2;
+
+
+    private string subTitle =
+    "What are Entities?";
+
+    private string content =
+        "So Burst Compiler is actually pretty cool that i waas able " +
+            "to to this now I have to start woring on " +
+            "my Unity Gasme";
+
+    private string content2 =
+        "So Chunk Component is actually pretty cool that i waas able " +
+            "to to this now I have to start Chunk Component woring on " +
+            "my Unity Game";
+
+}

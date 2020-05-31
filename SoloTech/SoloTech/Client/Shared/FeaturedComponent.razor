@@ -1,0 +1,17 @@
+﻿<div class="card shadow-sm rounded mt-3 p-2">
+    <div class="card-body">
+        <div class="row row-cols-2">
+            <div class="col">
+                <h5 class="card-title">@Title</h5>
+            </div>
+            <div class="col text-right">3 mins ago</div>
+        </div>
+
+        <p class="card-text">@Description</p>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Title { get; set; }
+    [Parameter] public string Description { get; set; }
+}

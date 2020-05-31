@@ -1,0 +1,22 @@
+﻿<a target="_blank"
+   style="text-decoration:none;
+   color:black;"
+   href="@LinkTo">
+    <div class="card">
+        <img src="@ImgSrc" class="card-img-top bg-dark" alt="..." style="height: 9rem;">
+        <div class="card-body">
+            <h6>@Title</h6>
+            <p class="card-text primary-font">@Description</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+    </div>
+</a>
+
+@code {
+    [Parameter] public string LinkTo { get; set; }
+    [Parameter] public string ImgSrc { get; set; }
+    [Parameter] public string Title { get; set; }
+    [Parameter] public string Description { get; set; }
+}

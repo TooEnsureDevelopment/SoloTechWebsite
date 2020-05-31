@@ -1,0 +1,72 @@
+﻿@page "/"
+
+<div class="row">
+    <div class="col">
+
+        <div class="row">
+            <div class="col-xl-9">
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+                        <ArticleCardComponent LinkTo="https://localhost:5001/Documentation-Unity-DOTS-ECS-Entities"
+                                              ImgSrc="/img/DOTS.png"
+                                              Title="@Title"
+                                              Description="@Description" />
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+                        <ArticleCardComponent LinkTo="https://localhost:5001/unityCategories"
+                                              ImgSrc="/img/DOTS.png"
+                                              Title="@Title"
+                                              Description="@Description" />
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+                        <ArticleCardComponent LinkTo="https://localhost:5001/unityCategories"
+                                              ImgSrc="/img/DOTS.png"
+                                              Title="@Title"
+                                              Description="@Description" />
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+                        <ArticleCardComponent LinkTo="https://localhost:5001/unityCategories"
+                                              ImgSrc="/img/DOTS.png"
+                                              Title="@Title"
+                                              Description="@Description" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-3">
+                <SurveyPrompt Title="Want to learn more?" />
+                <SurveyPrompt Title="Want to learn more?" />
+                <SurveyPrompt Title="Want to learn more?" />
+                <SurveyPrompt Title="THIS IS A AD?" />
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<SurveyPrompt Title="Want to learn more?" />
+...
+Card title
+
+@code
+{
+
+    public string Title =
+        "Unity DOTS";
+
+    private string Description =
+        "Data Oriented Tech Stack. " +
+        "It's performance by default" +
+        "A new way of thinking ";
+
+
+
+}

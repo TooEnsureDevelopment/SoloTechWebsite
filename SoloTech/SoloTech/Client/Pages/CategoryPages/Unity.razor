@@ -1,0 +1,29 @@
+﻿@page "/unityCategories"
+
+<h1>Unity</h1>
+<hr />
+
+<div class="row">
+    <div class="col-xl-9">
+        <FeaturedComponent Title="@featureTitle"
+                           Description="@featureDescription" />
+        <FeaturedComponent Title="@featureTitle"
+                           Description="@featureDescription" />
+        <FeaturedComponent Title="@featureTitle"
+                           Description="@featureDescription" />
+        <FeaturedComponent Title="@featureTitle"
+                           Description="@featureDescription" />
+        <FeaturedComponent Title="@featureTitle"
+                           Description="@featureDescription" />
+    </div>
+</div>
+
+@code {
+    public string featureTitle = "Entities (ECS)";
+    public string featureDescription =
+        "ECS provides use with entities, which can be quite useful " +
+            "Here we'll creat some ECS entites in Unity " +
+            "Also dont forget to check out my github page" +
+            "Lets get started.";
+
+}
